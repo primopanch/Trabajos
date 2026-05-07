@@ -5,7 +5,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
@@ -21,7 +20,6 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
-
 import models.AuthModel;
 
 public class AuthView {
@@ -137,7 +135,10 @@ public class AuthView {
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		
-		lblNewLabel_6.setIcon(new ImageIcon(this.getClass().getResource("/images/redd-francisco-9o8YdYGTT64-unsplash.jpg")));
+		java.net.URL urlImg1 = this.getClass().getResource("/images/redd-francisco-9o8YdYGTT64-unsplash.jpg");
+		if (urlImg1 != null) {
+			lblNewLabel_6.setIcon(new ImageIcon(urlImg1));
+		}
 		lblNewLabel_6.setBounds(531, 6, 383, 494);
 		lblNewLabel_6.setBorder(BorderFactory.createLineBorder(Color.white,5,true));
 		panel.add(lblNewLabel_6);
@@ -156,7 +157,10 @@ public class AuthView {
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		
-		lblNewLabel_2.setIcon(new ImageIcon(this.getClass().getResource("/images/hidden.png")));
+		java.net.URL urlImg2 = this.getClass().getResource("/images/hidden.png");
+		if (urlImg2 != null) {
+			lblNewLabel_2.setIcon(new ImageIcon(urlImg2));
+		}
 		lblNewLabel_2.setBounds(351, 315, 24, 16);
 		panel.add(lblNewLabel_2);
 		

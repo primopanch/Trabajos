@@ -56,8 +56,11 @@ public class Ventana extends JFrame{
 
 		
 		try {
-			Image iconImage = ImageIO.read(getClass().getResource("/images/8152506.png"));
-	        this.setIconImage(iconImage);
+			java.net.URL urlIcon = getClass().getResource("/images/8152506.png");
+			if (urlIcon != null) {
+				Image iconImage = ImageIO.read(urlIcon);
+				this.setIconImage(iconImage);
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -184,7 +187,10 @@ public class Ventana extends JFrame{
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		
-		lblNewLabel_6.setIcon(new ImageIcon(this.getClass().getResource("/images/redd-francisco-9o8YdYGTT64-unsplash.jpg")));
+		java.net.URL urlImg1 = this.getClass().getResource("/images/redd-francisco-9o8YdYGTT64-unsplash.jpg");
+		if (urlImg1 != null) {
+			lblNewLabel_6.setIcon(new ImageIcon(urlImg1));
+		}
 		lblNewLabel_6.setBounds(531, 6, 383, 494);
 		lblNewLabel_6.setBorder(BorderFactory.createLineBorder(Color.white,5,true));
 		panel.add(lblNewLabel_6);
@@ -203,7 +209,10 @@ public class Ventana extends JFrame{
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		
-		lblNewLabel_2.setIcon(new ImageIcon(this.getClass().getResource("/images/hidden.png")));
+		java.net.URL urlImg2 = this.getClass().getResource("/images/hidden.png");
+		if (urlImg2 != null) {
+			lblNewLabel_2.setIcon(new ImageIcon(urlImg2));
+		}
 		lblNewLabel_2.setBounds(351, 315, 24, 16);
 		panel.add(lblNewLabel_2);
 		
@@ -410,17 +419,3 @@ public class Ventana extends JFrame{
 	
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
